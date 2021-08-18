@@ -1,5 +1,6 @@
 # SimpleReddit
 
+This is a simple implementation of Reddit core functionality, following a guide by the revised ng-book-2.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
 ## Development server
