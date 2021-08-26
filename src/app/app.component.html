@@ -1,7 +1,30 @@
-<h1>
-  {{ title }}
-  <app-hello-world></app-hello-world>
+<form class="ui medium form segment">
 
-  <app-user-list></app-user-list>
+  <h3 class="ui header">Add a link</h3>
 
-</h1>
+  <div class="field">
+    <label for="title">Title:</label>
+    <input name="title" id="title" #newtitle>
+  </div>
+
+  <div class="field">
+    <label for="link">Link:</label>
+    <input name="link" id="link" #newlink>
+  </div>
+
+  <div class="field">
+    <button (click)="addArticle(newtitle, newlink)" class="ui positive right button">
+      Submit Link
+    </button>
+  </div>
+
+</form>
+
+<div class="ui grid posts">
+    <app-article
+      *ngFor="let article of sortedArticles()"
+      [article]="article">
+
+    </app-article>
+
+</div>
